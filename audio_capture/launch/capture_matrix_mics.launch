@@ -25,36 +25,31 @@
       <param name="device" value="mic_channel2"/>
       <param name="channels" value="1"/>
       <param name="sample_rate" value="8000"/>
-   </node>
-  </group>
+  </node>
   <node name="mic3" pkg="audio_capture" type="audio_capture" output="screen">
         <param name="bitrate" value="128"/>
         <param name="device" value="mic_channel3"/>
         <param name="channels" value="1"/>
         <param name="sample_rate" value="8000"/>
-     </node>
-  </group>
+  </node>
   <node name="mic4" pkg="audio_capture" type="audio_capture" output="screen">
         <param name="bitrate" value="128"/>
         <param name="device" value="mic_channel4"/>
         <param name="channels" value="1"/>
         <param name="sample_rate" value="8000"/>
-     </node>
-  </group>
+  </node>
   <node name="mic5" pkg="audio_capture" type="audio_capture" output="screen">
         <param name="bitrate" value="128"/>
         <param name="device" value="mic_channel5"/>
         <param name="channels" value="1"/>
         <param name="sample_rate" value="8000"/>
-     </node>
-  </group>
+  </node>
   <node name="mic6" pkg="audio_capture" type="audio_capture" output="screen">
         <param name="bitrate" value="128"/>
         <param name="device" value="mic_channel6"/>
         <param name="channels" value="1"/>
         <param name="sample_rate" value="8000"/>
-     </node>
-  </group>
+  </node>
   <node name="mic7" pkg="audio_capture" type="audio_capture" output="screen">
         <param name="bitrate" value="128"/>
         <param name="device" value="mic_channel7"/>
