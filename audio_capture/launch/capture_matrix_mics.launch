@@ -1,0 +1,65 @@
+<launch>
+  <!-- arecord -l will show available input devices, use the car number as
+      the first number and the subdevice number as the second in a string
+      like hw:1,0 -->
+  <arg name="device" default=""/>
+  <arg name="channels" default="1"/>
+  <arg name="sample_rate" default="16000"/>
+  <arg name="ns" default="audio"/>
+
+  <group ns="$(arg ns)">
+  <node name="mic0" pkg="audio_capture" type="audio_capture" output="screen">
+    <param name="bitrate" value="128"/>
+    <param name="device" value="mic_channel0"/>
+    <param name="channels" value="1"/>
+    <param name="sample_rate" value="8000"/>
+  </node>
+  <node name="mic1" pkg="audio_capture" type="audio_capture" output="screen">
+      <param name="bitrate" value="128"/>
+      <param name="device" value="mic_channel1"/>
+      <param name="channels" value="1"/>
+      <param name="sample_rate" value="8000"/>
+  </node>
+  <node name="mic2" pkg="audio_capture" type="audio_capture" output="screen">
+      <param name="bitrate" value="128"/>
+      <param name="device" value="mic_channel2"/>
+      <param name="channels" value="1"/>
+      <param name="sample_rate" value="8000"/>
+   </node>
+  </group>
+  <node name="mic3" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="mic_channel3"/>
+        <param name="channels" value="1"/>
+        <param name="sample_rate" value="8000"/>
+     </node>
+  </group>
+  <node name="mic4" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="mic_channel4"/>
+        <param name="channels" value="1"/>
+        <param name="sample_rate" value="8000"/>
+     </node>
+  </group>
+  <node name="mic5" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="mic_channel5"/>
+        <param name="channels" value="1"/>
+        <param name="sample_rate" value="8000"/>
+     </node>
+  </group>
+  <node name="mic6" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="mic_channel6"/>
+        <param name="channels" value="1"/>
+        <param name="sample_rate" value="8000"/>
+     </node>
+  </group>
+  <node name="mic7" pkg="audio_capture" type="audio_capture" output="screen">
+        <param name="bitrate" value="128"/>
+        <param name="device" value="mic_channel7"/>
+        <param name="channels" value="1"/>
+        <param name="sample_rate" value="8000"/>
+     </node>
+  </group>
+</launch>
