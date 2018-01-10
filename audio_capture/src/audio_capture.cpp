@@ -28,6 +28,7 @@ namespace audio_transport
         ros::param::param<int>("~channels", _channels, 1);
         ros::param::param<int>("~depth", _depth, 16);
         ros::param::param<int>("~sample_rate", _sample_rate, 16000);
+        ros::param::param<std::string>("~topic", _topic, "audio");
 
         // The destination of the audio
         ros::param::param<std::string>("~dst", dst_type, "appsink");
@@ -37,7 +38,7 @@ namespace audio_transport
         std::string device;
         ros::param::param<std::string>("~device", device, "");
 
-        _pub = _nh.advertise<audio_common_msgs::AudioData>("audio", 10, true);
+        _pub = _nh.advertise<audio_common_msgs::AudioData>(_topic, 10, true);
 
         _loop = g_main_loop_new(NULL, false);
         _pipeline = gst_pipeline_new("ros_pipeline");
@@ -201,6 +202,7 @@ namespace audio_transport
       GstElement *_pipeline, *_source, *_filter, *_sink, *_convert, *_encode;
       GstBus *_bus;
       int _bitrate, _channels, _depth, _sample_rate;
+      std::string _topic;
       GMainLoop *_loop;
       std::string _format;
   };
