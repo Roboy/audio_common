@@ -62,7 +62,7 @@
         <param name="device" value="mic_channel7"/>
         <param name="channels" value="1"/>
         <param name="sample_rate" value="8000"/>
-        <param name="topic" value="mic7f"/>
+        <param name="topic" value="mic7"/>
      </node>
   </group>
 </launch>
